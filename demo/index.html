@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+    <title>Colourz v0.1</title>
+  </head>
+	<body>
+    <table>
+    	<tr>
+    		<td><input type="text" id="hex" value="#f39" /></td>
+    		<td><a href="javascript:void(0);" id="hex-to-rgb">hex-to-rgb</a><br/>
+    		<a href="javascript:void(0);" id="rgb-to-hex">rgb-to-hex</a></td>
+        <td><input type="text" id="rgb" value="rgba(0,255,238,0.2)"/></td>
+    	</tr>
+    </table>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../colourz.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('#hex-to-rgb').colourz({
+          from:'#hex',
+          to:'#rgb',
+          mode:'hex-to-rgb',
+          opacity:.2,
+          elementToPimp:'body',
+          cssProperty:'background-color'
+        });
+        $('#rgb-to-hex').colourz({
+          from:'#hex',
+          to:'#rgb',
+          mode:'rgb-to-hex',
+          elementToPimp:'body',
+          cssProperty:'background-color'
+        });
+      });
+    </script>
+  </body>
+</html>
